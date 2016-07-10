@@ -1,0 +1,34 @@
+{
+	"build_systems":
+	[
+		{
+			"cmd":
+			[
+				"xcodebuild",
+				"-project",
+				"$project_path/$project_base_name.xcodeproj",
+				"-configuration",
+				"Debug"
+			],
+			"name": "Xcode Build",
+			"variants":
+			[
+				{
+					"cmd":
+					[
+						"$project_path/build/build/Debug/Debug/MacOS/$project_base_name"
+					],
+					"name": "Xcode Run"
+				},
+				{
+					"cmd":
+					[
+						"open",
+						"$project_path/bin/$project_base_name.app"
+					],
+					"name": "Xcode Build Release"
+				}
+			]
+		}
+	]
+}
